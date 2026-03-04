@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaius Gregory Zechariah | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap');
+        
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+        }
+        
+        .name-font {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+        }
+
+        .hero-bg {
+            background-image: url('image/MAJORS\ PORTFOLIO.jpeg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .profile-ring {
+            background: linear-gradient(135deg, #9C1232, #F59E0B);
+        }
+    </style>
+</head>
+<body class="min-h-screen relative overflow-hidden text-white">
+    
+    <!-- Blurred background -->
+    <div class="hero-bg absolute inset-0 blur-[12px] scale-110"></div>
+    
+    <!-- Dark overlay for depth -->
+    <div class="absolute inset-0 bg-gradient-to-b from-black/30 via-black/50 to-black/70"></div>
+
+    <!-- Main content -->
+    <div class="relative z-10 min-h-screen flex items-center justify-center p-6">
+        
+        <div class="glass max-w-md w-full rounded-3xl shadow-2xl overflow-hidden">
+            
+            <!-- Card content -->
+            <div class="px-8 pt-10 pb-8 text-center">
+                
+                <!-- Profile Picture with gradient border -->
+                <div class="flex justify-center mb-7">
+                    <div class="relative w-56 h-56">
+                        <!-- Gradient ring -->
+                        <div class="profile-ring absolute inset-0 rounded-full"></div>
+                        <!-- White inner border -->
+                        <div class="absolute inset-[7px] bg-white/90 rounded-full overflow-hidden shadow-inner">
+                            <!-- Your photo goes here -->
+                            <img 
+                                src="image/MAJORS PORTFOLIO.jpeg" 
+                                alt="Gaius Gregory Zechariah"
+                                class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Name -->
+                <h1 class="name-font text-4xl md:text-5xl font-bold tracking-tight mb-1">
+                    Gaius Gregory Zechariah
+                </h1>
+                
+                <!-- Subtitle -->
+                <p class="text-lg text-white/90 mb-10">
+                    Web Developer &amp; Designer • Born in Abuja, Nigeria
+                </p>
+
+                <!-- Qualifications -->
+                <div class="text-left bg-white/10 rounded-2xl p-6 mb-10">
+                    <h2 class="text-2xl font-semibold mb-5 flex items-center gap-3">
+                        <span class="h-px flex-1 bg-white/30"></span>
+                        Qualifications
+                        <span class="h-px flex-1 bg-white/30"></span>
+                    </h2>
+                    <ul class="space-y-4 text-white/90 text-[15px]">
+                        <li class="flex gap-3">
+                            <span class="text-amber-400 text-xl leading-none mt-0.5">•</span>
+                            <span>O Level Certified From St. Charles Borromeo Minor Seminary Madakiya Kafanchan Kaduna State Nigeria</span>
+                        </li>
+                        <li class="flex gap-3">
+                            <span class="text-amber-400 text-xl leading-none mt-0.5">•</span>
+                            <span>Computer Literacy from Jaycee Computer Institute Abuja Nyanya</span>
+                        </li>
+                        <li class="flex gap-3">
+                            <span class="text-amber-400 text-xl leading-none mt-0.5">•</span>
+                            <span>No Published Website Yet</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Contact Buttons -->
+                <div class="grid grid-cols-2 gap-4">
+                    <!-- WhatsApp -->
+                    <a href="https://wa.me/2349045022590" 
+                       target="_blank"
+                       class="group flex items-center justify-center gap-3 bg-[#25D366] hover:bg-[#22c55e] transition-all duration-300 text-white font-semibold py-5 px-6 rounded-2xl shadow-lg active:scale-95">
+                        <i class="fab fa-whatsapp text-3xl"></i>
+                        <div class="text-left">
+                            <div class="text-xs opacity-80">Chat with me on</div>
+                            <div class="text-lg leading-none">WhatsApp</div>
+                            <div class="text-xs opacity-70">+234 904 502 2590</div>
+                        </div>
+                    </a>
+
+                    <!-- Facebook -->
+                    <a href="#" 
+                       id="facebook-btn"
+                       target="_blank"
+                       class="group flex items-center justify-center gap-3 bg-[#1877F2] hover:bg-[#1666d9] transition-all duration-300 text-white font-semibold py-5 px-6 rounded-2xl shadow-lg active:scale-95">
+                        <i class="fab fa-facebook text-3xl"></i>
+                        <div class="text-left">
+                            <div class="text-xs opacity-80">Connect with me on</div>
+                            <div class="text-lg leading-none">Facebook</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Bottom bar -->
+            <div class="bg-white/10 py-4 text-center text-xs tracking-widest text-white/70">
+                © 2026 • GAIUS GREGORY ZECHARIAH • WEB DEVELOPER &amp; DESIGNER
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Tailwind script is already loaded via CDN
+        
+        // Facebook button handler (you will replace the href)
+        document.getElementById('facebook-btn').addEventListener('click', function(e) {
+            if (this.getAttribute('href') === '#') {
+                e.preventDefault();
+                alert("Please replace '#' with your actual Facebook profile link in the code!");
+            }
+        });
+
+        // Optional subtle animation on load
+        window.onload = () => {
+            const card = document.querySelector('.glass');
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            
+            setTimeout(() => {
+                card.style.transition = 'all 1s cubic-bezier(0.34, 1.56, 0.64, 1)';
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0)';
+            }, 300);
+        };
+    </script>
+</body>
+</html>
